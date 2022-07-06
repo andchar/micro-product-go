@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/go-redis/redis/v8"
+	"github.com/go-redis/redis"
 	"github.com/jasonlvhit/gocron"
 	"github.com/shadowshot-x/micro-product-go/couponservice/store"
 	"go.uber.org/zap"
