@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        go 'go1.15'
+        go 'go1.14'
     }
     environment {
         GO114MODULE = 'on'
@@ -12,6 +12,12 @@ pipeline {
     }
 
     stages {
+        stage("debug") {
+            steps {
+                echo 'debug'
+                sh 'env'
+            }
+        }
         stage("unit-test") {
             steps {
                 echo 'UNIT TEST EXECUTION STARTED'
