@@ -12,7 +12,7 @@ pipeline {
     }
 
     stages {
-        stage("unit-test") {
+        stage("params") {
             steps {
                 script { 
                     properties([
@@ -41,6 +41,10 @@ pipeline {
                         ])
                     ])
                 }
+            }
+        }
+        stage("unit-test") {
+            steps {
                 echo 'UNIT TEST EXECUTION STARTED'
                 sh 'make unit-tests'
             }
